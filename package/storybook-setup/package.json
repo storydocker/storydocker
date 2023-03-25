@@ -1,0 +1,46 @@
+{
+  "name": "storybook-setup",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/my-element.es.js",
+  "exports": {
+    ".": "./dist/my-element.es.js"
+  },
+  "types": "types/my-element.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@storybook/addon-coverage": "^0.0.8",
+    "@storybook/addon-essentials": "^7.0.0-rc.8",
+    "@storybook/addon-interactions": "^7.0.0-rc.8",
+    "@storybook/addon-links": "^7.0.0-rc.8",
+    "@storybook/addon-mdx-gfm": "^7.0.0-rc.8",
+    "@storybook/blocks": "^7.0.0-rc.8",
+    "@storybook/jest": "^0.0.11-next.1",
+    "@storybook/react": "^7.0.0-rc.8",
+    "@storybook/react-vite": "^7.0.0-rc.8",
+    "@storybook/test-runner": "^0.10.0-next.11",
+    "@storybook/testing-library": "^0.0.14-next.1",
+    "@storybook/vue3": "^7.0.0-rc.8",
+    "@storybook/vue3-vite": "^7.0.0-rc.8",
+    "@storybook/web-components": "^7.0.0-rc.8",
+    "@storybook/web-components-vite": "^7.0.0-rc.8",
+    "storybook": "^7.0.0-rc.8"
+  },
+  "devDependencies": {
+    "lit": "^2.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.1"
+  }
+}

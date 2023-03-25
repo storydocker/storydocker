@@ -1,0 +1,19 @@
+{
+  "name": "storydocker",
+  "version": "0.0.0",
+  "description": "Storybook dev environment using Docker",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "npm run storybook --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "keywords": [
+    "docker",
+    "storybook"
+  ],
+  "author": "scottnath",
+  "license": "MIT",
+  "workspaces": [
+    "package/*"
+  ]
+}
