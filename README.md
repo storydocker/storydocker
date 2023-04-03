@@ -4,18 +4,20 @@ Use storydocker to generate a Storybook environment in a docker container for an
 
 ## What is this?
 
-Base setup of an npm module with one workspace package that contains a generic UI component library with a Storybook setup
+Base setup of an npm module with one workspace package that contains a generic UI component library with a Storybook setup. The `Dockerfile` example below will inject your local directory into a `package` directory inside the docker image. The `docker-compose` file will run the image in a container and automatically sync your local file changes into the container.
 
 ## storydocker basic setup steps
 
 1. generate React w/Vite app with npm create vite@latest
-1. add a Dockerfile with FROM ghcr.io/storydocker/storydocker:main (see Dockerfile below)
+1. add a Dockerfile at the rood of your project with FROM ghcr.io/storydocker/storydocker:main (see Dockerfile below)
 1. add two npm scripts to package.json
     ```
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
     ```
 1. add a .storybook directory config
+1. add the `docker-compose.yml` file at the rood of your project; see contents below
+1. run `docker compose up`  at the rood of your project
 
 
 ### `Dockerfile`
