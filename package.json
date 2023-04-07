@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "storybook": "npm run storybook --workspaces --if-present",
+    "build-storybook": "npm run storybook --workspaces --if-present",
     "test": "npm run test --workspaces --if-present"
   },
   "keywords": [

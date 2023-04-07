@@ -1,0 +1,20 @@
+FROM ghcr.io/storydocker/storydocker:main
+
+# Destination directory inside the container - one level, do not use subdirectories
+ARG WORKSPACE_DIR=react-vite
+
+# This is optional. Sets the level of logging that you see
+ENV NPM_CONFIG_LOGLEVEL warn
+
+# Install dependencies first, as they change less often than code.
+COPY package.json ./package/${WORKSPACE_DIR}/
+RUN npm i && npm cache clean --force
+
+# Copy entire workspace into container
+COPY . ./package/${WORKSPACE_DIR}/
+
+# Make storybook port available available
+EXPOSE 6006
+
+# run storybook app
+CMD ["npm", "run", "storybook", "-workspace", "package/${WORKSPACE_DIR}/"]
