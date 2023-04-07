@@ -22,12 +22,16 @@ This should work for both component libraries and full applications
 
 ### StoryDocker directory structure
 
+After adding your app to the StoryDocker image
+
+```
 📂 root
     📂 packages
         📂 storybook-setup
             (generic app with a storybook implementation)
         📂 YOUR APPLICATION
             (your app directory with all your app's dependencies installed)
+```
 
 ## Getting started
 
