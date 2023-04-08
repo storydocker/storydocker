@@ -5,7 +5,7 @@ import { Page } from './Page';
 import * as HeaderStories from './Header.stories';
 
 const meta = {
-  title: 'Example/Page',
+  title: 'StoryDocker/Page',
   render: (args: PageProps) => Page(args),
 } satisfies Meta<PageProps>;
 

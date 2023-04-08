@@ -15,7 +15,7 @@ RUN npm ci && npm cache clean --force
 COPY . .
 
 # Make storybook port available available
-EXPOSE 6006
+EXPOSE 2001
 
-# run storybook app
-CMD ["npm", "run", "storybook"]
+# run package/storybook-setup Storybook dev server
+CMD ["npm", "run", "sd"]

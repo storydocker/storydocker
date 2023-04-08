@@ -4,7 +4,7 @@ import { Button } from './Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/web-components/writing-stories/introduction
 const meta = {
-  title: 'Example/Button',
+  title: 'StoryDocker/Button',
   tags: ['autodocs'],
   render: (args) => Button(args),
   argTypes: {

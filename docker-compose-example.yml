@@ -8,7 +8,7 @@ services:
       # Same port as the one `EXPOSE`d in `Dockerfile.example` 
       - 6006:6006
     volumes:
-      # `react-vite` should be the same as `WORKSPACE_DIR` in `Dockerfile.example`
-      - .:/usr/src/app/package/react-vite
+      # `application` should be the same as `WORKSPACE_DIR` in `Dockerfile.example`
+      - .:/usr/src/app/workspaces/application
     command: npm run storybook
     

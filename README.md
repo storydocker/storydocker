@@ -22,20 +22,19 @@ This should work for both component libraries and full applications
 
 ### StoryDocker directory structure
 
-After adding your app to the StoryDocker image
-
 ```
 📂 root
-    📂 packages
+    📂 package
         📂 storybook-setup
             (generic app with a storybook implementation)
-        📂 YOUR APPLICATION
-            (your app directory with all your app's dependencies installed)
+    📂 workspaces
+        📂 application
+            (contents of your app directory)
 ```
 
 ## Getting started
 
-The [StoryDocker examples repo](https://github.com/StoryDocker/StoryDocker-examples) has example setups for React 18, Vue3, and Lit.
+The [StoryDocker examples repo](https://github.com/storydocker/StoryDocker-examples) has example setups for React 18, Vue3, and Lit.
 
 ### Steps to get started in your repo
 
@@ -51,7 +50,7 @@ The [StoryDocker examples repo](https://github.com/StoryDocker/StoryDocker-examp
 
 See the [example Dockerfile](./Dockerfile.example)
 
-The `Dockerfile` injects your local directory into a `package` directory inside the docker image created from StoryDocker.
+The `Dockerfile` injects your local directory into the `workspaces/application` directory inside the docker image created via StoryDocker.
 
 #### Step 2 - add a `docker-compose.yml` file
 

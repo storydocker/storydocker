@@ -15,7 +15,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 2001",
     "build-storybook": "storybook build"
   },
   "dependencies": {
