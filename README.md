@@ -15,8 +15,10 @@ So far, apps set up via `vite`'s [scaffolding api](https://vitejs.dev/guide/#sca
 Known to work with:
 
 * React 18
-* Vue3
+* Vue 3
 * Lit
+* Svelte
+* Vanilla/no-js-framework
 
 This should work for both component libraries and full applications
 

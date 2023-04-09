@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      # Same port as the one `EXPOSE`d in `Dockerfile.example` 
+      # must be same port as in Dockerfile, variable: `STORYBOOK_PORT`
       - 6006:6006
     volumes:
       # `application` should be the same as `WORKSPACE_DIR` in `Dockerfile.example`
