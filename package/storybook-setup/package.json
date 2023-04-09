@@ -30,6 +30,8 @@
     "@storybook/html-vite": "^7.0.2",
     "@storybook/react": "^7.0.2",
     "@storybook/react-vite": "^7.0.2",
+    "@storybook/svelte": "^7.0.2",
+    "@storybook/svelte-vite": "^7.0.2",
     "@storybook/test-runner": "^0.10.0",
     "@storybook/testing-library": "^0.1.0",
     "@storybook/vue3": "^7.0.2",
