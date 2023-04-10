@@ -1,8 +1,8 @@
 # StoryDocker
 
-Use StoryDocker to generate a Storybook environment in a docker container for an existing UI library.
+StoryDocker allows local Storybook development for an existing UI library without adding dependencies by leveraging docker containers
 
-Essentially, this is a micro-frontend for Storybook.
+Essentially, this makes Storybook a microservice.
 
 ## Overview
 
