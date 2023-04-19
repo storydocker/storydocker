@@ -1,3 +1,5 @@
+<p align="center"><img width="350" height="auto" src="https://user-images.githubusercontent.com/216931/230914077-441660d1-9070-4368-906f-648ac4330553.png" alt="StoryDocker logo" /></p>
+
 # StoryDocker
 
 StoryDocker allows local Storybook development for an existing UI library without adding dependencies by leveraging docker containers
