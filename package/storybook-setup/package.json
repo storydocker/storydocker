@@ -13,7 +13,8 @@
     "types"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run storybook",
+    "dev-vite": "vite",
     "build": "tsc && vite build",
     "storybook": "storybook dev -p 2001",
     "build-storybook": "storybook build",
@@ -26,9 +27,9 @@
     "@storybook/addon-links": "^7.0.6",
     "@storybook/addon-mdx-gfm": "^7.0.6",
     "@storybook/blocks": "^7.0.6",
-    "@storybook/jest": "^0.1.0",
     "@storybook/html": "^7.0.6",
     "@storybook/html-vite": "^7.0.6",
+    "@storybook/jest": "^0.1.0",
     "@storybook/react": "^7.0.6",
     "@storybook/react-vite": "^7.0.6",
     "@storybook/svelte": "^7.0.6",
@@ -54,6 +55,7 @@
     "svelte-check": "^3.2.0",
     "tslib": "^2.5.0",
     "typescript": "^5.0.4",
-    "vite": "^4.2.2"
+    "vite": "^4.2.2",
+    "vue": "^3.2.47"
   }
 }
