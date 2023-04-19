@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM mcr.microsoft.com/playwright:v1.32.0-focal
 
 # This is optional. Sets the level of logging that you see
 ENV NPM_CONFIG_LOGLEVEL warn

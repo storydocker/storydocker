@@ -6,10 +6,10 @@
   "scripts": {
     "storybook": "npm run storybook -w workspaces/* --if-present",
     "build-storybook": "npm run build-storybook -w workspaces/* --if-present",
-    "test": "npm run test -w workspaces/* --if-present",
+    "test": "npm run test-storybook -w workspaces/* --if-present",
     "sd": "npm run storybook --workspaces -w package/storybook-setup",
     "sd-build": "npm run build-storybook -w package/storybook-setup",
-    "sd-test": "npm run test --workspaces -w package/storybook-setup"
+    "sd-test": "npm run test-storybook --workspaces -w package/storybook-setup"
   },
   "keywords": [
     "docker",
