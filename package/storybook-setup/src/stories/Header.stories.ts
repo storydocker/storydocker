@@ -9,7 +9,7 @@ const mockOnLogout = jest.fn();
 const mockOnCreateAccount = jest.fn();
 
 const meta = {
-  title: 'StoryDocker/Header',
+  title: 'Example/Header',
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/7.0/web-components/writing-docs/docs-page
   tags: ['autodocs'],
   render: (args: HeaderProps) => Header(args),

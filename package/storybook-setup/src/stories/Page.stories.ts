@@ -7,7 +7,7 @@ import { getElements, ensureElements, mouseInteraction, keyboardInteraction } fr
 
 
 const meta = {
-  title: 'StoryDocker/Page',
+  title: 'Example/Page',
   tags: ['autodocs'],
   render: (args: PageProps) => Page(args),
 } satisfies Meta<PageProps>;

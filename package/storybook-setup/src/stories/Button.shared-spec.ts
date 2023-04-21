@@ -12,21 +12,25 @@ const mockOnClick = jest.fn();
  */
 export const getElements = async (canvasElement: HTMLElement) => {
   const screen = within(canvasElement);
-  const button = await screen.queryByRole('button');
 
   return { 
     screen,
-    button,
+    button: await screen.queryByRole('button'),
   };
 }
 
 /**
+ * Helper to add flair when test is shared
+ */
+const isShared = (shared = false) => shared ? '🤝' : '';
+
+/**
  * Ensure elements are present and have the correct attributes/content
  */
-export const ensureElements = async (elements: any, args: ButtonProps, step: StepFunction<any, ButtonProps>) => {
+export const ensureElements = async (elements: any, args: ButtonProps, step: StepFunction<any, ButtonProps>, shared = false) => {
   const { button } = elements;
   const buttonName = args.label ? args.label : 'Button';
-  await step(`${buttonName} button element config`, async () => {
+  await step(`Elements: "${buttonName}" button ${isShared(shared)}`, async () => {
     await expect(button).toBeTruthy();
     await expect(button).toHaveTextContent(args.label);
     if (args.primary) {
@@ -50,11 +54,11 @@ export const ensureElements = async (elements: any, args: ButtonProps, step: Ste
 /**
  * Test mouse interaction
  */
-export const mouseInteraction = async (elements: any, args: ButtonProps, step: StepFunction<any, ButtonProps>) => {
+export const mouseInteraction = async (elements: any, args: ButtonProps, step: StepFunction<any, ButtonProps>, shared = false) => {
   const { button } = elements;
   const buttonName = args.label ? args.label : 'Button';
   const onClick = args.onClick ? args.onClick : mockOnClick;
-  await step(`${buttonName} mouse interaction`, async () => {
+  await step(`Mouse: "${buttonName}" button ${isShared(shared)}`, async () => {
     await userEvent.click(button);
     await expect(onClick).toHaveBeenCalled();
     await expect(onClick).toHaveBeenCalledTimes(1);
@@ -66,11 +70,11 @@ export const mouseInteraction = async (elements: any, args: ButtonProps, step: S
 /**
  * Test keyboard interaction
  */
-export const keyboardInteraction = async (elements: any, args: ButtonProps, step: StepFunction<any, ButtonProps>) => {
+export const keyboardInteraction = async (elements: any, args: ButtonProps, step: StepFunction<any, ButtonProps>, shared = false) => {
   const { button } = elements;
   const buttonName = args.label ? args.label : 'Button';
   const onClick = args.onClick ? args.onClick : mockOnClick;
-  await step(`${buttonName} keyboard interaction`, async () => {
+  await step(`Keyboard: "${buttonName}" button ${isShared(shared)}`, async () => {
     await button.focus();
     await userEvent.keyboard('{enter}');
     await expect(onClick).toHaveBeenCalled();

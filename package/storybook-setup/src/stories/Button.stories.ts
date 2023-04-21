@@ -5,7 +5,7 @@ import { getElements, ensureElements, mouseInteraction, keyboardInteraction } fr
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/web-components/writing-stories/introduction
 const meta = {
-  title: 'StoryDocker/Button',
+  title: 'Example/Button',
   tags: ['autodocs'],
   render: (args) => Button(args),
   argTypes: {
