@@ -1,6 +1,6 @@
 name: Publish Package to npmjs
 on:
-  release:
+  registry_package:
     types: [published]
 jobs:
   build:
