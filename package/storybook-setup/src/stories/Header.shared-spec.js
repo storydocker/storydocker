@@ -1,15 +1,12 @@
 import { expect } from '@storybook/jest';
 import { within, userEvent } from '@storybook/testing-library';
-import { StepFunction } from '@storybook/types';
 
-import type { HeaderProps } from './Header';
 import { ensureElements as buttonEnsureElements, mouseInteraction as buttonMouseInteraction, keyboardInteraction as buttonKeyboardInteraction } from './Button.shared-spec';
 
 /**
  * Extract elements from an HTMLElement
- * @todo what `type` is being returned? Need `screen` type at least
  */
-export const getElements = async (canvasElement: HTMLElement) => {
+export const getElements = async (canvasElement) => {
   const screen = within(canvasElement);
   const buttons = await screen.queryAllByRole('button');
   const title = await screen.queryByRole('heading', { name: /Acme/i });
@@ -30,7 +27,7 @@ const isShared = (shared = false) => shared ? '🤝' : '';
 /**
  * Ensure elements are present and have the correct attributes/content
  */
-export const ensureElements = async (elements: any, args: HeaderProps, step: StepFunction<any, any>, shared = false) => {
+export const ensureElements = async (elements, args, step, shared = false) => {
   const { buttons } = elements;
   await step(`Elements: Header ${isShared(shared)}`, async () => {
     await expect(elements.header).toBeTruthy();
@@ -63,7 +60,7 @@ export const ensureElements = async (elements: any, args: HeaderProps, step: Ste
 /**
  * Test mouse interaction
  */
-export const mouseInteraction = async (elements: any, args: HeaderProps, step: StepFunction<any, any>, shared = false) => {
+export const mouseInteraction = async (elements, args, step, shared = false) => {
   const { buttons } = elements;
   if (args.user) {
     await step(`Mouse: Logged in user ${isShared(shared)}`, async () => {
@@ -80,12 +77,18 @@ export const mouseInteraction = async (elements: any, args: HeaderProps, step: S
         size: 'small',
         onClick: args.onLogin,
       }, step, true);
+      if (args.userSetState) {
+        await args.userSetState();
+      }
       await buttonMouseInteraction({ button: buttons[1] }, {
         label: 'Sign up',
         size: 'small',
         primary: true,
         onClick: args.onCreateAccount,
       }, step, true);
+      if (args.userSetState) {
+        await args.userSetState();
+      }
     });
   }
 }
@@ -93,7 +96,7 @@ export const mouseInteraction = async (elements: any, args: HeaderProps, step: S
 /**
  * Test keyboard interaction
  */
-export const keyboardInteraction = async (elements: any, args: HeaderProps, step: StepFunction<any, any>, shared = false) => {
+export const keyboardInteraction = async (elements, args, step, shared = false) => {
   const { buttons, header } = elements;
   if (args.user) {
     await step(`Keyboard: Logged in user ${isShared(shared)}`, async () => {
