@@ -13,6 +13,6 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
-      - run: npm publish -w package/storybook-setup
+      - run: npm publish -w package/storybook-setup --access public --provenance 
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
