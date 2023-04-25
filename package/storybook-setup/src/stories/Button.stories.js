@@ -1,28 +1,19 @@
-import type { Meta, StoryObj } from '@storybook/web-components';
-import type { ButtonProps } from './Button';
 import { Button } from './Button';
 import { getElements, ensureElements, mouseInteraction, keyboardInteraction } from './Button.shared-spec';
 
-// More on how to set up stories at: https://storybook.js.org/docs/7.0/web-components/writing-stories/introduction
-const meta = {
+
+// More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
+export default {
   title: 'Example/Button',
+  component: Button,
   tags: ['autodocs'],
-  render: (args) => Button(args),
   argTypes: {
     backgroundColor: { control: 'color' },
-    onClick: { action: 'onClick' },
-    size: {
-      control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
-    },
   },
-} satisfies Meta<ButtonProps>;
+};
 
-export default meta;
-type Story = StoryObj<ButtonProps>;
-
-// More on writing stories with args: https://storybook.js.org/docs/7.0/web-components/writing-stories/args
-export const Primary: Story = {
+// More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
+export const Primary = {
   args: {
     primary: true,
     label: 'Button',
@@ -35,14 +26,14 @@ export const Primary: Story = {
   },
 };
 
-export const Secondary: Story = {
+export const Secondary = {
   args: {
     label: 'Button',
   },
   play: Primary.play,
 };
 
-export const Large: Story = {
+export const Large = {
   args: {
     size: 'large',
     label: 'Button',
@@ -50,7 +41,7 @@ export const Large: Story = {
   play: Primary.play,
 };
 
-export const Small: Story = {
+export const Small = {
   args: {
     size: 'small',
     label: 'Button',
@@ -58,10 +49,10 @@ export const Small: Story = {
   play: Primary.play,
 };
 
-export const BackgroundColor: Story = {
+export const BackgroundColor = {
   args: {
     label: 'With Background',
-    backgroundColor: 'purple',
+    backgroundColor: 'pink',
   },
   play: Primary.play,
 };

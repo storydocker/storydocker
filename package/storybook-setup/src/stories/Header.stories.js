@@ -1,6 +1,5 @@
 import { jest } from '@storybook/jest';
-import type { Meta, StoryObj } from '@storybook/web-components';
-import type { HeaderProps } from './Header';
+
 import { Header } from './Header';
 import { getElements, ensureElements, mouseInteraction, keyboardInteraction } from './Header.shared-spec';
 
@@ -10,15 +9,13 @@ const mockOnCreateAccount = jest.fn();
 
 const meta = {
   title: 'Example/Header',
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/7.0/web-components/writing-docs/docs-page
   tags: ['autodocs'],
-  render: (args: HeaderProps) => Header(args),
-} satisfies Meta<HeaderProps>;
+  render: (args) => Header(args),
+};
 
 export default meta;
-type Story = StoryObj<HeaderProps>;
 
-export const LoggedIn: Story = {
+export const LoggedIn = {
   args: {
     user: {
       name: 'Jane Doe',
@@ -35,7 +32,7 @@ export const LoggedIn: Story = {
   },
 };
 
-export const LoggedOut: Story = {
+export const LoggedOut = {
   args: {
     onLogin: mockOnLogin,
     onLogout: mockOnLogout,
