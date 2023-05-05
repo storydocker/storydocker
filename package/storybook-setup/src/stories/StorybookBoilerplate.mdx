@@ -7,6 +7,8 @@ import Flow from './assets/flow.svg';
 import Plugin from './assets/plugin.svg';
 import Repo from './assets/repo.svg';
 import StackAlt from './assets/stackalt.svg';
+import StoryDocker from '../assets/storydocker-logo-transparent.png';
+import DevToLogo from '../assets/dev-to-logo.png';
 
 <Meta title="Example/Storybook Boilerplate +" />
 
@@ -116,8 +118,30 @@ import StackAlt from './assets/stackalt.svg';
   `}
 </style>
 
-# Boilerplate Storybook stories plus shared tests
+<img src={StoryDocker} alt="StoryDocker logo" width="20%" align="left" />
+<br/>
+<br/>
 
-These are the  Storybook stories automatically installed by the Storybook CLI when you create a new project.
+# Boilerplate Storybook stories with interaction tests added
 
-Interaction tests have been added.
+These are the Storybook stories which are automatically installed by the Storybook CLI when you create a new project.
+
+
+<div className="subheading" style={{clear: 'both'}}>Learn</div>
+
+<div className="link-list">
+  <a className="link-item" href="https://dev.to/scottnath/shared-tests-how-to-write-reusable-storybook-interaction-tests-489c" target="_blank">
+    <img src={DevToLogo} alt="Dev.to logo" />
+    <span>
+      <strong>Article: <em>Shared tests - how to write reusable Storybook Interaction Tests</em></strong>
+      Writing reusable tests means they can be shared within and between components.
+    </span>
+  </a>
+  <a className="link-item" href="https://dev.to/scottnath/sharing-interaction-tests-between-components-12b8" target="_blank">
+    <img src={DevToLogo} alt="Dev.to logo" />
+    <span>
+      <strong>Series: <em>Sharing Interaction Tests Between Components</em></strong>
+      Descriptions and code examples for sharing tests between components. Includes info on writing tests for Storybook's boilerplate components.
+    </span>
+  </a>
+</div>
