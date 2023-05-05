@@ -1,6 +1,6 @@
 {
-  "name": "@storydocker/storybook-setup",
-  "version": "0.0.1",
+  "name": "storydocker-storybook",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "npm run storybook",
@@ -11,7 +11,7 @@
     "storybook": "storybook dev -p 2001",
     "build-storybook": "storybook build",
     "test-storybook": "test-storybook --url http://localhost:2001  --coverage",
-    "chromatic": "npx chromatic --project-token=d4d7ea889db8"
+    "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
     "@storybook/addon-a11y": "^7.0.8",
@@ -34,7 +34,8 @@
     "@storybook/vue3-vite": "^7.0.8",
     "@storybook/web-components": "^7.0.8",
     "@storybook/web-components-vite": "^7.0.8",
-    "storybook": "^7.0.8"
+    "storybook": "^7.0.8",
+    "storydocker-cli": "^0.0.4"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.1.1",
