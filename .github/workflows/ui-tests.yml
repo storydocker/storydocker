@@ -1,0 +1,25 @@
+
+name: 'UI Tests'
+
+on: push
+
+jobs:
+  # Run interaction and accessibility tests
+  interaction-and-accessibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+      - name: Build Storybook
+        run: npm run sd-build --quiet
+      - name: Serve Storybook and run tests
+        run: |
+          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+          "npx http-server ./package/storybook-setup/storybook-static --port 2001 --silent" \
+          "npx wait-on http://127.0.0.1:2001 && npx test-storybook  --url http://127.0.0.1:2001 --config-dir ./package/storybook-setup/.storybook --coverage"
