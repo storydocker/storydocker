@@ -106,3 +106,6 @@ dist
 # local dev
 *.bak
 bak
+
+# storybook
+storybook-static
