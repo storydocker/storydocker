@@ -19,6 +19,7 @@ Known to work with:
 * React 18
 * Vue 3
 * Lit
+* Preact
 * Svelte
 * Vanilla/no-js-framework
 
