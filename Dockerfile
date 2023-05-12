@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:v1.32.0-focal
+FROM mcr.microsoft.com/playwright:v1.32.0-jammy
 
 # This is optional. Sets the level of logging that you see
 ENV NPM_CONFIG_LOGLEVEL warn
