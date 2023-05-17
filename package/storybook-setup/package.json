@@ -1,7 +1,15 @@
 {
   "name": "storydocker-storybook",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
+  "description": "The default multi-framework Storybook setup used by StoryDocker",
+  "keywords": [
+    "storybook",
+    "storybookjs",
+    "storydocker",
+    "testing-library"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "npm run storybook",
     "start": "npm run dev",
@@ -54,8 +62,16 @@
     "react-dom": "^18.2.0",
     "svelte": "^3.59.1",
     "svelte-check": "^3.3.2",
-    "vite": "^4.3.6",
+    "vite": "^4.3.7",
     "vue": "^3.3.2"
   },
-  "readme": "ERROR: No README data found!"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storydocker/storydocker.git"
+  },
+  "homepage": "https://github.com/storydocker/storydocker",
+  "author": {
+    "name": "scottnath",
+    "url": "https://scottnath.com"
+  }
 }
