@@ -1,6 +1,6 @@
 {
   "name": "storydocker-storybook",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "description": "The default multi-framework Storybook setup used by StoryDocker",
   "keywords": [
@@ -45,7 +45,7 @@
     "@storybook/web-components": "^7.0.18",
     "@storybook/web-components-vite": "^7.0.18",
     "storybook": "^7.0.18",
-    "storydocker-cli": "^0.0.5"
+    "storydocker-cli": "^0.0.6"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.5.0",
