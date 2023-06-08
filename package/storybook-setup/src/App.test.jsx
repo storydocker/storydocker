@@ -1,6 +1,6 @@
-import { render, screen, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { composeStories } from '@storybook/react';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import App, { defaultProps } from "./App";
 import * as stories from './App.stories'
@@ -24,9 +24,7 @@ describe('App', () => {
 
     it('should increment count on click', async () => {
       const { getByRole, findByText } = render(<App />);
-      waitFor(() => {
-        userEvent.click(getByRole('button'))
-      })
+      await userEvent.click(getByRole('button'));
       expect(await findByText(/count is 1/i)).toBeInTheDocument()
     })
   });
@@ -46,10 +44,8 @@ describe('App', () => {
 
     it('should increment count on click', async () => {
       const { getByRole, findByText } = render(<Defaults />);
-      waitFor(() => {
-        userEvent.click(getByRole('button'))
-      })
+      await userEvent.click(getByRole('button'))
       expect(await findByText(/count is 1/i)).toBeInTheDocument()
-    })})
-
+    })
+  })
 })

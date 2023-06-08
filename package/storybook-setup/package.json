@@ -18,10 +18,10 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 2001",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook --url http://localhost:2001  --coverage",
+    "test-storybook": "test-storybook --url http://localhost:2001  --coverage --verbose",
     "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage --reporter=verbose"
   },
   "dependencies": {
     "@storybook/addon-a11y": "^7.0.18",

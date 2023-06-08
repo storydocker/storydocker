@@ -8,6 +8,7 @@ export default defineConfig({
     coverage: {
       all: true,
       include: ['src/**/*.jsx'],
+      exclude: ['src/main.jsx'],
       provider: 'istanbul',
       reporter: ['text', 'json', 'html'],
     },
