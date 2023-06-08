@@ -1,6 +1,7 @@
 import { composeStories } from '@storybook/react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { describe, it, expect } from 'vitest'
 
 import App, { defaultProps } from "./App";
 import * as stories from './App.stories'

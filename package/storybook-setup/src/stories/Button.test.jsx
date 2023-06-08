@@ -1,6 +1,6 @@
-import { vi } from 'vitest'
-import { composeStories } from '@storybook/react'
+import { composeStories } from '@storybook/react';
 import { render } from '@testing-library/react';
+import { describe, it, vi } from 'vitest';
 
 import { Button } from "./Button";
 import * as stories from './Button.stories';

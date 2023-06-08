@@ -1,5 +1,6 @@
 import { composeStories } from '@storybook/react'
 import { render } from '@testing-library/react';
+import { describe, it } from 'vitest'
 
 import * as stories from './Page.stories';
 import { userSetState, getElements, ensureElements, mouseInteraction, keyboardInteraction } from './Page.shared-spec';

@@ -1,5 +1,6 @@
-import { composeStories } from '@storybook/react'
+import { composeStories } from '@storybook/react';
 import { render } from '@testing-library/react';
+import { describe, it } from 'vitest';
 
 import * as stories from './Header.stories';
 import { getElements, ensureElements, mouseInteraction, keyboardInteraction } from './Header.shared-spec';
