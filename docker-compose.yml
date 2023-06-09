@@ -1,0 +1,14 @@
+## example file will not work in the `storydocker` repo
+services:
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      # must be same port as in Dockerfile, variable: `STORYBOOK_PORT`
+      - 2001:2001
+    volumes:
+      # `application` should be the same as `WORKSPACE_DIR` in `Dockerfile.example`
+      - ./package/storybook-setup:/usr/src/app/package/storybook-setup
+    command: ["tail", "-f", "/dev/null"]
+    

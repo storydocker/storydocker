@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:v1.32.0-jammy
+FROM mcr.microsoft.com/playwright:v1.35.0-jammy
 
 # This is optional. Sets the level of logging that you see
 ENV NPM_CONFIG_LOGLEVEL warn
@@ -12,7 +12,7 @@ COPY ./package/storybook-setup/package.json ./package/storybook-setup/
 RUN npm ci && npm cache clean --force
 
 # Copy entire workspace into container
-COPY . .
+COPY ./package/storybook-setup ./package/storybook-setup
 
 # Make storybook port available available
 EXPOSE 2001
