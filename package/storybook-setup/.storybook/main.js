@@ -1,25 +1,43 @@
 import path from 'path';
+import { mergeConfig } from 'vite';
+import istanbul from 'vite-plugin-istanbul';
 
+const coverageConfig = {
+  include: ['../src/**/*.jsx'],
+  exclude: ['src/main.jsx'],
+  extension: ['.jsx'],
+  excludeNodeModules: true,
+  all: true,
+};
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    "@storybook/addon-coverage",
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@storybook/addon-coverage',
   ],
   framework: {
-    name: "@storybook/react-vite",
+    name: '@storybook/react-vite',
     options: {},
   },
   docs: {
-    autodocs: "tag",
+    autodocs: 'tag',
   },
   async viteFinal(config, options) {
-    // Ensures that the cache directory is inside the project directory
-    config.cacheDir = path.join(__dirname, '../node_modules/.vite-unique-name')
-    return config;
+    return mergeConfig(config, {
+      // customize the Vite config here
+      build: {
+        sourcemap: true,
+      },
+      cacheDir: path.join(__dirname, './.vite-unique-cache'),
+      plugins: [
+        istanbul({
+          ...coverageConfig
+        }),
+      ],
+    });
   },
 };
 export default config;

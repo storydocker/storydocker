@@ -1,5 +1,5 @@
 import { Button } from './Button';
-import { getElements, ensureElements, mouseInteraction, keyboardInteraction } from './Button.shared-spec';
+import { getElements, ensureElementsStep, mouseInteractionStep, keyboardInteractionStep } from './Button.shared-spec';
 
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
@@ -20,9 +20,9 @@ export const Primary = {
   },
   play: async ({ args, canvasElement, step }) => {
     const elements = await getElements(canvasElement);
-    await ensureElements(elements, args, step);
-    await mouseInteraction(elements, args, step);
-    await keyboardInteraction(elements, args, step);
+    await ensureElementsStep(elements, args, step);
+    await mouseInteractionStep(elements, args, step);
+    await keyboardInteractionStep(elements, args, step);
   },
 };
 

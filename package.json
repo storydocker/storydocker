@@ -9,7 +9,9 @@
     "test": "npm run test-storybook -w workspaces/* --if-present",
     "sd": "npm run storybook --workspaces -w package/storybook-setup",
     "sd-build": "npm run build-storybook -w package/storybook-setup",
-    "sd-test": "npm run test-storybook --workspaces -w package/storybook-setup"
+    "sd-test": "npm run test-storybook --workspaces -w package/storybook-setup",
+    "sd-unit": "npm run test --workspaces -w package/storybook-setup",
+    "sd-coverage": "npm run coverage --workspaces -w package/storybook-setup"
   },
   "keywords": [
     "docker",
