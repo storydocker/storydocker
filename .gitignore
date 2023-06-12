@@ -106,6 +106,7 @@ dist
 # local dev
 *.bak
 bak
+.DS_Store
 
 # storybook
 storybook-static

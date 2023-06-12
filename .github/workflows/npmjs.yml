@@ -1,4 +1,6 @@
 name: Publish Package to npmjs
+permissions:
+  id-token: write # to enable use of OIDC for npm provenance
 on:
   push:
     branches: ['main']
