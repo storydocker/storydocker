@@ -6,7 +6,17 @@ module.exports = {
     "@semantic-release/github",
     "@semantic-release/npm",
     [
-      "semantic-release-gitmoji"
+      "semantic-release-gitmoji",
+      {
+        releaseRules: {
+          patch: {
+            include: [':bento:', ':arrow_up:', ':lock:'],
+          },
+        },
+        // releaseNotes: {
+        //   template: fs.readFileSync(tplFile, 'utf-8'),
+        // }
+      }
     ]
   ]
 }
