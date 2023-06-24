@@ -1,16 +1,14 @@
-{
-  "branches": ["utilities", "main"],
+module.exports = {
+	"ignorePackages": [
+		"package/storybook-setup"
+	],
+	"deps": {
+		"bump": "inherit"
+	},
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/npm",
-    [
-      "@semantic-release/github",
-      {
-        "successComment": false,
-        "failComment": false
-      }
-    ],
     [
       "semantic-release-gitmoji"
     ]
