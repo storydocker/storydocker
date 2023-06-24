@@ -12,6 +12,9 @@ module.exports = {
           patch: {
             include: [':bento:', ':arrow_up:', ':lock:'],
           },
+          patch: {
+            include: [':sparkles:'],
+          },
         },
         // releaseNotes: {
         //   template: fs.readFileSync(tplFile, 'utf-8'),
