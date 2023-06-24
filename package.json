@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "Storybook dev environment using Docker",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storydocker/storydocker.git"
+  },
   "scripts": {
     "storybook": "npm run storybook -w workspaces/* --if-present",
     "build-storybook": "npm run build-storybook -w workspaces/* --if-present",

@@ -2,6 +2,10 @@
   "name": "storydocker-utilities",
   "type": "module",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storydocker/storydocker.git"
+  },
   "scripts": {
     "test": "vitest",
     "test:ui": "vitest --ui",
@@ -9,6 +13,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@qiwi/multi-semantic-release": "^7.0.0",
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/preact": "^3.2.3",
