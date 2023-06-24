@@ -10,6 +10,9 @@
         "successComment": false,
         "failComment": false
       }
+    ],
+    [
+      "semantic-release-gitmoji"
     ]
   ]
 }
