@@ -1,9 +1,16 @@
 import { gitmojis } from 'gitmojis';
 
+export const releaseRules = {
+  major: gitmojis.filter(({ semver }) => semver === 'major').map(({ code }) => code),
+  minor: gitmojis.filter(({ semver }) => semver === 'minor').map(({ code }) => code),
+  patch: gitmojis.filter(({ semver }) => semver === 'patch').map(({ code }) => code),
+};
+
 export default {
   branches: [
     { name: 'main' },
-    { name: "utilities", channel: "next", prerelease: true }
+    { name: 'next', channel: 'next', prerelease: true },
+    { name: 'utilities', channel: 'utilities', prerelease: true },
   ],
   plugins: [
     '@semantic-release/commit-analyzer',
@@ -14,11 +21,7 @@ export default {
       'semantic-release-gitmoji',
       {
         tagFormat: 'storydocker-utilities@v${version}',
-        releaseRules: {
-          major: gitmojis.filter(({ semver }) => semver === 'major').map(({ code }) => code),
-          minor: gitmojis.filter(({ semver }) => semver === 'minor').map(({ code }) => code),
-          patch: gitmojis.filter(({ semver }) => semver === 'patch').map(({ code }) => code),
-        },
+        releaseRules,
       }
     ]
   ]
