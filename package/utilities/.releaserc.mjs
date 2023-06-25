@@ -13,7 +13,6 @@ export default {
   branches: [
     { name: 'main' },
     { name: 'next', channel: 'next', prerelease: true },
-    { name: 'utilities', channel: 'utilities', prerelease: true },
   ],
   plugins: [
     '@semantic-release/commit-analyzer',
