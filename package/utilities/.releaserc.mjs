@@ -1,10 +1,18 @@
 import { gitmojis } from 'gitmojis';
 
+/**
+ * Generate release rules from gitmojis
+ */
 export const releaseRules = {
   major: gitmojis.filter(({ semver }) => semver === 'major').map(({ code }) => code),
   minor: gitmojis.filter(({ semver }) => semver === 'minor').map(({ code }) => code),
   patch: gitmojis.filter(({ semver }) => semver === 'patch').map(({ code }) => code),
 };
+
+/**
+ * Add other patch emojis
+ */
+releaseRules.patch.concat([':rocket:']);
 
 export default {
   branches: [
