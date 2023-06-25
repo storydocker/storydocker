@@ -9,11 +9,6 @@ export const releaseRules = {
   patch: gitmojis.filter(({ semver }) => semver === 'patch').map(({ code }) => code),
 };
 
-/**
- * Add other patch emojis
- */
-releaseRules.patch.concat([':rocket:']);
-
 export default {
   branches: [
     { name: 'main' },
