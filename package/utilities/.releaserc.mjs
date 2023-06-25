@@ -3,7 +3,7 @@ import { gitmojis } from 'gitmojis';
 export default {
   branches: [
     { name: 'main' },
-    { name: "utilities", channel: "next" }
+    { name: "utilities", channel: "next", prerelease: true }
   ],
   plugins: [
     '@semantic-release/commit-analyzer',
