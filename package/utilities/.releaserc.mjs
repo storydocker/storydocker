@@ -1,6 +1,6 @@
 import { gitmojis } from 'gitmojis';
 
-module.exports = {
+export default {
   branches: [
     { name: 'main' },
     { name: "utilities", channel: "next" }
