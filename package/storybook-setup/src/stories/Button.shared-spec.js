@@ -60,6 +60,8 @@ export const mouseInteraction = async (elements, args) => {
   await expect(args.onClick).toHaveBeenCalledTimes(1);
   // @ts-ignore
   await args.onClick.mockClear();
+  // reset user focus
+  await button.blur();
 }
 
 export const mouseInteractionStep = async (elements, args, step, shared = false) => {
@@ -82,6 +84,8 @@ export const keyboardInteraction = async (elements, args) => {
   await expect(args.onClick).toHaveBeenCalledTimes(1);
   // @ts-ignore
   await args.onClick.mockClear();
+  // reset user focus
+  await button.blur();
 }
 
 export const keyboardInteractionStep = async (elements, args, step, shared = false) => {
