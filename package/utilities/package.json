@@ -1,7 +1,7 @@
 {
   "name": "storydocker-utilities",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/storydocker/storydocker.git"
@@ -32,7 +32,7 @@
     "react-dom": "^18.2.0",
     "semantic-release": "^21.0.5",
     "semantic-release-gitmoji": "^1.6.4",
-    "storydocker-storybook": "^0.0.9",
+    "storydocker-storybook": "0.0.10",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^0.32.2"
   }
