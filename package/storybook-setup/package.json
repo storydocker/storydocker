@@ -34,7 +34,7 @@
     "@storybook/html": "^7.1.0",
     "@storybook/html-vite": "^7.1.0",
     "@storybook/jest": "^0.1.0",
-    "@storybook/preact": "^7.1.0",
+    "@storybook/preact": "^7.2.3",
     "@storybook/preact-vite": "^7.1.0",
     "@storybook/react": "^7.1.0",
     "@storybook/react-vite": "^7.1.0",
