@@ -36,7 +36,7 @@
     "@storybook/jest": "^0.1.0",
     "@storybook/preact": "^7.1.0",
     "@storybook/preact-vite": "^7.1.0",
-    "@storybook/react": "^7.1.0",
+    "@storybook/react": "^7.2.3",
     "@storybook/react-vite": "^7.1.0",
     "@storybook/svelte": "^7.1.0",
     "@storybook/svelte-vite": "^7.1.0",
