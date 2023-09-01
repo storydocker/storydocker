@@ -1,3 +1,6 @@
+import { expect } from '@storybook/jest';
+global.expect = expect;
+
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {

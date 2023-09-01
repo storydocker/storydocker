@@ -1,11 +1,12 @@
-import { composeStories } from '@storybook/react';
 import { render } from '@testing-library/react';
-import { describe, it } from 'vitest';
+import { describe, it, vi } from 'vitest';
 
-import * as stories from './Header.stories';
+import { Header } from './Header';
 import { getElements, ensureElements, mouseInteraction, keyboardInteraction } from './Header.shared-spec';
 
-const { LoggedIn, LoggedOut } = composeStories(stories);
+const mockOnLogin = vi.fn();
+const mockOnLogout = vi.fn();
+const mockOnCreateAccount = vi.fn();
 
 /**
  * Uses the shared spec assertions inside vitest test functions
@@ -33,10 +34,23 @@ const headerTestSuite = (Component, args) => {
 describe('Header', () => {
   describe('Configured by Storybook boilerplate stories', () => {
     describe('LoggedIn', () => {
-      headerTestSuite(LoggedIn, LoggedIn.args);
+      const args = {
+        user: {
+          name: 'Jane Doe',
+        },
+        onLogin: mockOnLogin,
+        onLogout: mockOnLogout,
+        onCreateAccount: mockOnCreateAccount,
+      };
+      headerTestSuite(Header, args);
     });
     describe('LoggedOut', () => {
-      headerTestSuite(LoggedOut, LoggedOut.args);
+      const args = {
+        onLogin: mockOnLogin,
+        onLogout: mockOnLogout,
+        onCreateAccount: mockOnCreateAccount,
+      };
+      headerTestSuite(Header, args);
     });
   });
 })

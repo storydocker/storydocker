@@ -1,4 +1,3 @@
-import { expect, jest } from '@storybook/jest';
 import { within, userEvent } from '@storybook/testing-library';
 
 /**
