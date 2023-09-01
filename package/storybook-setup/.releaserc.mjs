@@ -5,7 +5,7 @@ const plugins = config.plugins.map(plugin => {
     return [
       'semantic-release-gitmoji',
       {
-        tagFormat: 'storydocker-setup@v${version}',
+        tagFormat: 'storydocker-storybook@${version}',
         releaseRules,
       }
     ];

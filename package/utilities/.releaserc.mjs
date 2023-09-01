@@ -34,7 +34,7 @@ export default {
     [
       'semantic-release-gitmoji',
       {
-        tagFormat: 'storydocker-utilities@v${version}',
+        tagFormat: 'storydocker-utilities@${version}',
         releaseRules,
       }
     ]
