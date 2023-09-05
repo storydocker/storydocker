@@ -14,6 +14,6 @@ Currently a WIP, the StoryDocker CLI is used for things like auto-generating Sto
 
 ## Shared tests
 
-This package includes tests for the Storybook boilerplate stories. These Storybook interaction tests can be imported by your project to test the auto-installed boilerplate stories.
+This package includes tests for the Storybook boilerplate stories. These Storybook interaction tests can be imported by your project to test the auto-installed-by-storybook-cli boilerplate stories.
 
 See to article series [Sharing tests across UI components](https://dev.to/scottnath/series/22727) on dev.to for details.
