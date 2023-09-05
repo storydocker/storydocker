@@ -28,6 +28,8 @@
     "@vitest/ui": "0.34.3",
     "chromatic": "^6.24.1",
     "jsdom": "^22.1.0",
+    "marked-gfm-heading-id": "^3.0.7",
+    "marked-mangle": "^1.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "semantic-release": "^21.1.1",
