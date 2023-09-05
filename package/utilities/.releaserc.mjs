@@ -16,8 +16,13 @@ export default {
   ],
   debug: true,
   plugins: [
-    '@semantic-release/commit-analyzer',
-    '@semantic-release/release-notes-generator',
+    [
+      'semantic-release-gitmoji',
+      {
+        tagFormat: 'storydocker-utilities@${version}',
+        releaseRules,
+      }
+    ],
     [
       "@semantic-release/github",
       {
@@ -32,12 +37,5 @@ export default {
       }
     ],
     '@semantic-release/npm',
-    [
-      'semantic-release-gitmoji',
-      {
-        tagFormat: 'storydocker-utilities@${version}',
-        releaseRules,
-      }
-    ]
   ]
 }
