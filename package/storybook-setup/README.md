@@ -1,6 +1,6 @@
 # The StoryDocker default Storybook setup
 
-This package contains the default Storybook setup for StoryDocker. 
+This package contains the default Storybook setup for StoryDocker, which can also be used as a standalone Storybook setup for your project.
 
 ## Storybook Dependencies
 

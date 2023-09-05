@@ -5,15 +5,17 @@ import { gitmojis } from 'gitmojis';
  */
 export const releaseRules = {
   major: gitmojis.filter(({ semver }) => semver === 'major').map(({ code }) => code),
-  minor: gitmojis.filter(({ semver }) => semver === 'minor').map(({ code }) => code),
-  patch: gitmojis.filter(({ semver }) => semver === 'patch').map(({ code }) => code),
+  minor: gitmojis.filter(({ semver }) => semver === 'minor').map(({ code }) => code).concat(':new:'),
+  patch: gitmojis.filter(({ semver }) => (semver === 'patch' || semver === null)).map(({ code }) => code),
 };
+console.log(releaseRules);
 
 export default {
   branches: [
     { name: 'main' },
     { name: 'next', channel: 'next', prerelease: true },
   ],
+  debug: true,
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',

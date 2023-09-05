@@ -1,7 +1,9 @@
 StoryDocker utilities
 ---
 
-Utils for:
+Various setups to reduce individual dependencies for other projects.
+
+Utils and dependencies for:
 
 * semantic-release
 * vite-test
