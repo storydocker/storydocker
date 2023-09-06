@@ -12,6 +12,9 @@
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage"
   },
+  "exports": {
+    "./releases": "./releases/.releaserc.cjs"
+  },
   "dependencies": {
     "@qiwi/multi-semantic-release": "^7.0.0",
     "@semantic-release/exec": "^6.0.3",

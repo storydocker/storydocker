@@ -17,6 +17,7 @@
     "sd-unit": "npm run test --workspaces -w package/storybook-setup",
     "sd-coverage": "npm run coverage --workspaces -w package/storybook-setup"
   },
+  "type": "module",
   "keywords": [
     "docker",
     "storybook"
