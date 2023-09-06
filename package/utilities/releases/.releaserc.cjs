@@ -5,7 +5,6 @@ const { gitmojis } = require('gitmojis');
 const template = fs.readFileSync(path.join(__dirname, './default-template-semver.hbs'), 'utf-8');
 const commitTemplate = fs.readFileSync(path.join(__dirname, './commit-template.hbs'), 'utf-8');
 
-delete require.cache['semantic-release-gitmoji'];
 /**
  * Generate release rules = require(gitmoji)s
  */
@@ -18,9 +17,9 @@ const releaseRules = {
 module.exports = {
   branches: [
     { name: 'main', channel: 'latest', prerelease: false },
+    { name: 'next', channel: 'next', prerelease: true },
   ],
   debug: true,
-  tagFormat: 'scottnath-experiments-a@${version}',
   plugins: [
     [
       'semantic-release-gitmoji',
@@ -34,23 +33,19 @@ module.exports = {
           },
         }
       }
+    ],    [
+      '@semantic-release/github',
+      {
+        'successComment': false,
+        'failComment': false
+      }
     ],
-    // ["@semantic-release/exec", {
-    //   "generateNotesCmd": "echo ${JSON.stringify(nextRelease)}"
-    // }],
-    // [
-    //   "@semantic-release/github",
-    //   {
-    //     "successComment": false,
-    //     "failComment": false
-    //   }
-    // ],
-    // [
-    //   "@semantic-release/git",
-    //   {
-    //     "message": "chore(release): ${nextRelease.gitTag} [skip ci]\n\n${nextRelease.notes}"
-    //   }
-    // ],
-    // '@semantic-release/npm',
+    [
+      '@semantic-release/git',
+      {
+        'message': 'chore(release): ${nextRelease.gitTag} [skip ci]\n\n${nextRelease.notes}'
+      }
+    ],
+    '@semantic-release/npm',
   ]
 }
