@@ -6,7 +6,7 @@ This package contains the default Storybook setup for StoryDocker, which can als
 
 The Storybook dependencies are added as `dependencies` instead of the typical `devDependencies`. If you install this package, NPM will also install the Storybook dependencies for your project. 
 
-This is a multi-framework setup, but the JS framework dependencies are installed as `devDependencies` - so those will not conflict with your project deps. 
+This is a multi-framework setup, but any JS framework-specific dependencies are installed as `devDependencies` - so those will not conflict with your project deps. 
 
 ## StoryDocker CLI
 
