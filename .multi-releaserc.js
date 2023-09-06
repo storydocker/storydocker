@@ -1,6 +1,6 @@
-module.exports = {
-	"deps": {
-		"bump": "inherit"
+export default {
+	deps: {
+		bump: 'inherit'
 	},
-  "debug": true,
+  debug: true,
 }
