@@ -9,3 +9,5 @@ Utils and dependencies for:
 * vite-test
 * web components
 * testing-library
+
+## Releasing
