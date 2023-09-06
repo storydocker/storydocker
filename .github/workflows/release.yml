@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      - next
+      - release-fixes
 
 permissions:
   contents: read # for checkout
@@ -34,4 +34,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx multi-semantic-release --logLevel=trace
+        run: npx multi-semantic-release --logLevel=trace --debug=true --dry-run

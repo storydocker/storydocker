@@ -17,6 +17,7 @@ const releaseRules = {
 module.exports = {
   branches: [
     { name: 'main', channel: 'latest', prerelease: false },
+    { name: 'release-fixes', channel: 'release', prerelease: true },
   ],
   debug: true,
   plugins: [
@@ -32,6 +33,19 @@ module.exports = {
           },
         }
       }
+    ],    [
+      '@semantic-release/github',
+      {
+        'successComment': false,
+        'failComment': false
+      }
     ],
+    [
+      '@semantic-release/git',
+      {
+        'message': 'chore(release): ${nextRelease.gitTag} [skip ci]\n\n${nextRelease.notes}'
+      }
+    ],
+    '@semantic-release/npm',
   ]
 }
