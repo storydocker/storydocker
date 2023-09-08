@@ -30,8 +30,13 @@ export const generateTemplateFile = async () => {
 {{else}}
 # v{{nextRelease.version}} ({{datetime "UTC:yyyy-mm-dd"}})
 {{/if}}
+
+{{#with commits}}
 `;
   fileContents += getTemplateCodes();
+  fileContents += `
+{{/with}}
+`;
   try {
     await outputFile(`./${filename}`, fileContents);
   } catch (err) {

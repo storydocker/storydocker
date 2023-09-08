@@ -3,7 +3,6 @@ const path = require('path');
 const { gitmojis } = require('gitmojis');
 
 const template = fs.readFileSync(path.join(__dirname, './all-gitmoji.hbs'), 'utf-8');
-const commitTemplate = fs.readFileSync(path.join(__dirname, './commit-template.hbs'), 'utf-8');
 
 /**
  * Generate release rules = require(gitmoji)s
@@ -28,9 +27,6 @@ module.exports = {
         releaseNotes: {
           semver: false,
           template,
-          partials: {
-            commitTemplate,
-          },
         }
       }
     ],    [
