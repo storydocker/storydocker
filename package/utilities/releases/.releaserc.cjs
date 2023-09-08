@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { gitmojis } = require('gitmojis');
 
-const template = fs.readFileSync(path.join(__dirname, './default-template-semver.hbs'), 'utf-8');
+const template = fs.readFileSync(path.join(__dirname, './all-gitmoji.hbs'), 'utf-8');
 const commitTemplate = fs.readFileSync(path.join(__dirname, './commit-template.hbs'), 'utf-8');
 
 /**
@@ -26,7 +26,7 @@ module.exports = {
       {
         releaseRules,
         releaseNotes: {
-          semver: true,
+          semver: false,
           template,
           partials: {
             commitTemplate,
