@@ -27,7 +27,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@testing-library/vue": "^7.0.0",
     "@vitejs/plugin-react": "^4.0.4",
-    "@vitejs/plugin-vue": "^4.3.4",
+    "@vitejs/plugin-vue": "^4.4.0",
     "@vitest/coverage-istanbul": "^0.34.3",
     "@vitest/ui": "0.34.3",
     "chromatic": "^7.0.0",
