@@ -30,7 +30,7 @@
     "@storybook/addon-interactions": "^7.4.0",
     "@storybook/addon-links": "^7.4.0",
     "@storybook/addon-mdx-gfm": "^7.4.0",
-    "@storybook/blocks": "^7.4.0",
+    "@storybook/blocks": "^7.5.0",
     "@storybook/html": "^7.4.0",
     "@storybook/html-vite": "^7.4.0",
     "@storybook/jest": "^0.2.2",
