@@ -24,7 +24,6 @@
     "coverage": "vitest run --coverage --reporter=verbose"
   },
   "dependencies": {
-    "@chromaui/addon-visual-tests": "^0.0.107",
     "@storybook/addon-a11y": "^7.5.1",
     "@storybook/addon-coverage": "^0.0.9",
     "@storybook/addon-essentials": "^7.5.1",

@@ -10,8 +10,7 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "test:release": "NPM_TOKEN=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 GITHUB_TOKEN=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 npx semantic-release --dryRun --debug=true"
+    "test:coverage": "vitest run --coverage"
   },
   "exports": {
     "./releases": "./releases/.releaserc.cjs"
