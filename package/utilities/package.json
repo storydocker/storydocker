@@ -16,17 +16,17 @@
     "./releases": "./releases/.releaserc.cjs"
   },
   "dependencies": {
-    "@qiwi/multi-semantic-release": "^7.1.0",
+    "@qiwi/multi-semantic-release": "^7.1.1",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@sveltejs/vite-plugin-svelte": "^2.4.6",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/preact": "^3.2.3",
     "@testing-library/react": "^14.0.0",
-    "@testing-library/svelte": "^4.0.4",
+    "@testing-library/svelte": "^4.0.5",
     "@testing-library/user-event": "^14.5.1",
-    "@testing-library/vue": "^7.0.0",
-    "@vitejs/plugin-react": "^4.1.0",
+    "@testing-library/vue": "^8.0.0",
+    "@vitejs/plugin-react": "^4.1.1",
     "@vitejs/plugin-vue": "^4.4.0",
     "@vitest/coverage-istanbul": "^0.34.6",
     "@vitest/ui": "0.34.6",
@@ -35,10 +35,14 @@
     "marked-mangle": "^1.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "semantic-release": "^22.0.5",
+    "semantic-release": "^22.0.7",
     "semantic-release-gitmoji": "github:scottnath/semantic-release-gitmoji#release-notes-class",
     "shadow-dom-testing-library": "^1.11.0",
     "vite-tsconfig-paths": "^4.2.1",
     "vitest": "^0.34.6"
+  },
+  "resolutions": {
+    "react": ">18.0.0",
+    "react-dom": ">18.0.0"
   }
 }
