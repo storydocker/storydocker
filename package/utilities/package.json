@@ -19,7 +19,7 @@
     "@qiwi/multi-semantic-release": "^7.1.1",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@sveltejs/vite-plugin-svelte": "^2.4.6",
+    "@sveltejs/vite-plugin-svelte": "^2.5.0",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/preact": "^3.2.3",
     "@testing-library/react": "^14.0.0",
