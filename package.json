@@ -15,7 +15,8 @@
     "sd-build": "npm run build-storybook -w package/storybook-setup",
     "sd-test": "npm run test-storybook --workspaces -w package/storybook-setup",
     "sd-unit": "npm run test --workspaces -w package/storybook-setup",
-    "sd-coverage": "npm run coverage --workspaces -w package/storybook-setup"
+    "sd-coverage": "npm run coverage --workspaces -w package/storybook-setup",
+    "ut-unit": "npm run test:coverage --workspaces -w package/utilities"
   },
   "type": "module",
   "keywords": [
@@ -29,6 +30,8 @@
     "workspaces/*"
   ],
   "devDependencies": {
-    "npm-force-resolutions": "^0.0.10"
+    "@vitest/coverage-istanbul": "^1.0.2",
+    "npm-force-resolutions": "^0.0.10",
+    "vite": "^5.0.7"
   }
 }
