@@ -28,10 +28,5 @@
   "workspaces": [
     "package/*",
     "workspaces/*"
-  ],
-  "devDependencies": {
-    "@vitest/coverage-istanbul": "^1.0.2",
-    "npm-force-resolutions": "^0.0.10",
-    "vite": "^5.0.7"
-  }
+  ]
 }
