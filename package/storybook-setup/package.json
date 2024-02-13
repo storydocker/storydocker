@@ -81,6 +81,6 @@
     "magic-string": "^0.30.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vitest": ">1.2.2"
+    "vitest": "^1.2.2"
   }
 }
