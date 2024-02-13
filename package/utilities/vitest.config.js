@@ -11,7 +11,7 @@ export default defineConfig({
       '@/': new URL('./src/', import.meta.url).pathname,
     },
     environment: 'jsdom',
-    setupFiles: ['storydocker-utilities/tests/setup.js'],
+    setupFiles: ['./tests/setup.js'],
     coverage: {
       all: true,
       include: ['src/**/*.jsx', 'src/**/*.tsx', 'src/**/*.vue', 'src/**/*.svelte'],
