@@ -35,14 +35,13 @@
     "marked-mangle": "^1.1.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "semantic-release": "^23.0.2",
+    "semantic-release": "^22.0.0",
     "semantic-release-gitmoji": "github:scottnath/semantic-release-gitmoji#release-notes-class",
     "shadow-dom-testing-library": "^1.11.2",
     "vite-tsconfig-paths": "^4.3.1",
     "vitest": "^1.2.2"
   },
   "overrides": {
-    "@vitest/coverage-istanbul": "^1.0.2",
     "react": ">18.0.0",
     "react-dom": ">18.0.0",
     "vite": "^5.1.1",

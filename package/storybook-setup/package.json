@@ -78,7 +78,6 @@
   },
   "overrides": {
     "@vitejs/plugin-vue": "^5.0.4",
-    "@vitest/coverage-istanbul": "^1.0.2",
     "magic-string": "^0.30.7",
     "react": ">18.0.0",
     "react-dom": ">18.0.0",
