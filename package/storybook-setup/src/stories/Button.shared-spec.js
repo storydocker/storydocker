@@ -1,4 +1,4 @@
-import { within, userEvent } from '@storybook/testing-library';
+import { within, userEvent } from '@storybook/test';
 
 /**
  * Extract elements from an HTMLElement

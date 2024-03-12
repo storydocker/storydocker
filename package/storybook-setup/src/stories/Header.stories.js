@@ -1,11 +1,11 @@
-import { jest } from '@storybook/jest';
+import { fn } from '@storybook/test';
 
 import { Header } from './Header';
 import { getElements, ensureElementsStep, mouseInteractionStep, keyboardInteractionStep } from './Header.shared-spec';
 
-const mockOnLogin = jest.fn();
-const mockOnLogout = jest.fn();
-const mockOnCreateAccount = jest.fn();
+const mockOnLogin = fn();
+const mockOnLogout = fn();
+const mockOnCreateAccount = fn();
 
 const meta = {
   title: 'Example/Header',
