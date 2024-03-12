@@ -13,6 +13,7 @@ const releaseRules = {
 module.exports = {
   branches: [
     { name: 'main', channel: 'latest', prerelease: false },
+    { name: 'next', channel: 'next', prerelease: true },
   ],
   debug: true,
   tagFormat: 'storydocker-utilities@${version}',

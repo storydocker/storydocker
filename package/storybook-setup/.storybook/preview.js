@@ -1,10 +1,12 @@
-import { expect } from '@storybook/jest';
+import { expect, fn } from '@storybook/test';
 global.expect = expect;
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
+  args: {
+    onClick: fn(),
+  },
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
         color: /(background|color)$/i,

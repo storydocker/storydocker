@@ -1,3 +1,5 @@
+import { fn } from '@storybook/test';
+
 import { Button } from './Button';
 import { getElements, ensureElementsStep, mouseInteractionStep, keyboardInteractionStep } from './Button.shared-spec';
 
@@ -17,6 +19,7 @@ export const Primary = {
   args: {
     primary: true,
     label: 'Primary',
+    onClick: fn(),
   },
   play: async ({ args, canvasElement, step }) => {
     const elements = await getElements(canvasElement);
