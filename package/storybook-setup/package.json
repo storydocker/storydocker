@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@chromatic-com/storybook": "^1.2.18",
-    "@guidepup/virtual-screen-reader": "^0.22.1",
+    "@guidepup/virtual-screen-reader": "^0.23.0",
     "@storybook/addon-a11y": "^8.0.0",
     "@storybook/addon-coverage": "^1.0.1",
     "@storybook/addon-essentials": "^8.0.0",
