@@ -23,8 +23,8 @@
     "coverage": "vitest run --coverage --reporter=verbose"
   },
   "dependencies": {
-    "@chromatic-com/storybook": "^1.2.18",
-    "@guidepup/virtual-screen-reader": "^0.22.1",
+    "@chromatic-com/storybook": "^1.2.20",
+    "@guidepup/virtual-screen-reader": "^0.24.0",
     "@storybook/addon-a11y": "^8.0.0",
     "@storybook/addon-coverage": "^1.0.1",
     "@storybook/addon-essentials": "^8.0.0",
@@ -54,10 +54,10 @@
     "storydocker-cli": "^0.0.7"
   },
   "devDependencies": {
-    "@preact/preset-vite": "^2.8.1",
+    "@preact/preset-vite": "^2.8.2",
     "@tsconfig/svelte": "^5.0.2",
-    "@types/react": "^18.2.65",
-    "@types/react-dom": "^18.2.21",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
     "lit": "^3.1.2",
     "preact": "^10.19.6",
