@@ -23,7 +23,7 @@
     "coverage": "vitest run --coverage --reporter=verbose"
   },
   "dependencies": {
-    "@chromatic-com/storybook": "^1.3.1",
+    "@chromatic-com/storybook": "^1.3.2",
     "@guidepup/virtual-screen-reader": "^0.24.0",
     "@storybook/addon-a11y": "^8.0.6",
     "@storybook/addon-coverage": "^1.0.1",
@@ -46,23 +46,23 @@
     "@storybook/vue3-vite": "^8.0.6",
     "@storybook/web-components": "^8.0.6",
     "@storybook/web-components-vite": "^8.0.6",
+    "@vitest/coverage-istanbul": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "shadow-dom-testing-library": "^1.11.2",
     "storybook": "^8.0.6",
-    "storybook-addon-mock": "^4.3.0",
     "storydocker-cli": "^0.0.7"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.8.2",
     "@tsconfig/svelte": "^5.0.4",
-    "@types/react": "^18.2.74",
+    "@types/react": "^18.2.75",
     "@types/react-dom": "^18.2.24",
     "@vitejs/plugin-react": "^4.2.1",
     "lit": "^3.1.2",
-    "preact": "^10.20.1",
+    "preact": "^10.20.2",
     "prop-types": "^15.8.1",
-    "svelte": "^4.2.12",
+    "svelte": "^4.2.13",
     "svelte-check": "^3.6.9",
     "vite": "^5.2.8",
     "vue": "^3.4.21"
