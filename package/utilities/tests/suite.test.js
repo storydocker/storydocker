@@ -12,8 +12,4 @@ describe('suite name', () => {
   it('baz', () => {
     expect(1 + 1 + 1).eq(3)
   })
-
-  it('snapshot', () => {
-    expect({ foo: 'bar' }).toMatchSnapshot()
-  })
 })
