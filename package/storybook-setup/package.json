@@ -41,7 +41,7 @@
     "@storybook/svelte": "^8.1.1",
     "@storybook/svelte-vite": "^8.1.1",
     "@storybook/test": "^8.1.1",
-    "@storybook/test-runner": "^0.18.0",
+    "@storybook/test-runner": "^0.18.1",
     "@storybook/vue3": "^8.1.1",
     "@storybook/vue3-vite": "^8.1.1",
     "@storybook/web-components": "^8.1.1",
